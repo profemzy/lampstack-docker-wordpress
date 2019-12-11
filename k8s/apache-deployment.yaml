@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: apache
+  template:
+    metadata:
+      labels:
+        component: apache
+    spec:
+      containers:
+        - name: apache
+          image: 686233958969.dkr.ecr.eu-west-1.amazonaws.com/lampstack_apache
+          ports:
+            - containerPort: 80
