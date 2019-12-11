@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: 686233958969.dkr.ecr.eu-west-1.amazonaws.com/lampstack_mysql
+          image: profemzy/lampstack_mysql
